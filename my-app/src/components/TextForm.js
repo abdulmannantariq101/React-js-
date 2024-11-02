@@ -38,7 +38,7 @@ export default function TextForm(props) {
 
                 </div>
                 <button className="btn btn-primary mx-4 my-2" onClick={handleUpClick} >Convert to Uppercase</button>
-                <button className="btn btn-primary " onClick={handlelowClick} >Convert to Uppercase</button>
+                <button className="btn btn-primary " onClick={handlelowClick} >Convert to Lowercase</button>
                 <button className="btn btn-success mx-4 my-2" onClick={handleClear}>Clear Text</button>
             </div>
 
@@ -47,7 +47,7 @@ export default function TextForm(props) {
 
 
                 <h2>Text Summary</h2>
-                <p>{text.split(" ").length} words and {text.length} character</p>
+                <p>{text.split(" ").length} words with spaces, {text.split(/\s+/).filter(word => word).length} words without spaces and {text.length} character</p>
                 {/* 170 words read in one minute then 1/170 */}
                 <p>{0.005 * text.split(" ").length}Minutes Read</p>
 
