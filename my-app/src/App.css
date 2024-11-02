@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+/* text-area preview container */
+
+.preview-container {
+  max-height: 200px; /* Adjust as needed */
+  overflow-y: auto;
+  
+  word-wrap: break-word; /* Prevents long words from breaking layout */
+
+  padding: 1rem;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.navbar .nav-link {
+  color: white !important;
+}
+.navbar .navbar-brand{
+  color: white !important;
+}
