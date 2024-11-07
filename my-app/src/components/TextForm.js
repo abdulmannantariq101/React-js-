@@ -31,10 +31,10 @@ export default function TextForm(props) {
     const [text, setText] = useState('Enter the text here');
     return (
         <>
-            <div>
+            <div style={{color: props.mood==='dark'?'white':'black' }} className='container '>
                 <h1>{props.heading}</h1>
                 <div className="my-4 mx-4">
-                    <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="8" ></textarea>
+                    <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor: props.mood==='dark'?'gray':'white', color:  props.mood==='dark'?'white':'black' }} id="myBox" rows="8" ></textarea>
 
                 </div>
                 <button className="btn btn-primary mx-4 my-2" onClick={handleUpClick} >Convert to Uppercase</button>
@@ -43,7 +43,7 @@ export default function TextForm(props) {
             </div>
 
 
-            <div className="container my-3">
+            <div style={{color: props.mood==='dark'?'white':'black' }} className="container my-3">
 
 
                 <h2>Text Summary</h2>
@@ -55,7 +55,7 @@ export default function TextForm(props) {
 
 
             </div>
-            <div className="preview-container">
+            <div style={{color: props.mood==='dark'?'white':'black',backgroundColor: props.mood==='dark'?'gray':'white' }} className="preview-container">
                 {/* using props for understanding */}
                 <h3>{props.type}</h3>
                 <p>{text}</p>
